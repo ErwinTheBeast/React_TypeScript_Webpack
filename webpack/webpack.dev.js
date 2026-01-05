@@ -1,0 +1,18 @@
+const webpack = require('webpack');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+
+module.exports = {
+    mode: 'development',
+    devServer: {
+        hot: true,
+        open: true,
+    },
+    devtool: 'cheap-source-map',
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.name': JSON.stringify('Shubham')
+        }),
+        new ReactRefreshWebpackPlugin(),
+    ],
+}
+// What is a source map?
