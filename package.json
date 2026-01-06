@@ -10,7 +10,8 @@
     "build": "mkdir build && webpack --config webpack/webpack.config.js --env env=prod",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix\"./src/**/*.{js,jsx,ts,tsx,json}\" --ignore-pattern \"**/build/\" --ignore-pattern \"**/webpack/**\" --ignore-pattern \"**/node_modules/**\" --ignore-pattern \".eslintrc.js\"",
-    "clean": "rimraf build"
+    "clean": "rimraf build",
+    "prettier": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
     "react": "^19.2.3",
@@ -31,11 +32,16 @@
     "cli": "^1.0.1",
     "css-loader": "^7.1.2",
     "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "html-webpack-plugin": "^5.6.5",
+    "husky": "4",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
     "react-refresh": "^0.18.0",
     "rimraf": "^6.1.2",
     "style-loader": "^4.0.0",
