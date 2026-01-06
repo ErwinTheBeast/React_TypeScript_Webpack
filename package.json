@@ -9,8 +9,8 @@
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
     "build": "mkdir build && webpack --config webpack/webpack.config.js --env env=prod",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --fix\"./src/**/*.{js,jsx,ts,tsx,json}\" --ignore-pattern \"**/build/\" --ignore-pattern \"**/webpack/**\" --ignore-pattern \"**/node_modules/**\" --ignore-pattern \".eslintrc.js\"",
-    "clean": "rimraf build",
+    "lint": "eslint --fix\"./src/**/*.{js,jsx,ts,tsx,json}\" --ignore-pattern \"**/build/\" --ignore-pattern \"**/webpack/**\" --ignore-pattern \"**/node_modules/**\" --ignore-pattern \".*.js\"",
+    "clean": "rimraf build && rimraf node_modules",
     "prettier": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
@@ -50,5 +50,18 @@
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2",
     "webpack-merge": "^6.0.1"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx,ts,tsx,json} \" --ignore-pattern \"**/build/\" --ignore-pattern \"**/webpack/**\" --ignore-pattern \"**/node_modules/**\" --ignore-pattern \".eslintrc.js\"": [
+      "eslint --fix"
+    ],
+    "./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
