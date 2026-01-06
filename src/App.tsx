@@ -6,6 +6,7 @@ import LOGO from './React.svg';
 import { ClickCounter } from './ClickCounter';
 
 export const App = () => {
+  const name = 'fg';
   return (
     <>
       <h1>
