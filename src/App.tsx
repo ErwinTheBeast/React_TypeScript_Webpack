@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import './styles.css';
 import IMAGE from './React.png';
 import LOGO from './React.svg';

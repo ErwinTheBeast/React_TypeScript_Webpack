@@ -1,4 +1,4 @@
-const { plugins } = require("./webpack.common");
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'production',
