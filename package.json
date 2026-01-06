@@ -52,7 +52,7 @@
     "webpack-merge": "^6.0.1"
   },
   "lint-staged": {
-    "./src/**/*.{js,jsx,ts,tsx,json} \" --ignore-pattern \"**/build/\" --ignore-pattern \"**/webpack/**\" --ignore-pattern \"**/node_modules/**\" --ignore-pattern \".eslintrc.js\"": [
+    "./src/**/*.{js,jsx,ts,tsx,json}": [
       "eslint --fix"
     ],
     "./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [

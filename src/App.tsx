@@ -1,4 +1,4 @@
-// /* eslint-disable */
+/* eslint-disable */
 
 import './styles.css';
 import IMAGE from './React.png';
@@ -6,7 +6,6 @@ import LOGO from './React.svg';
 import { ClickCounter } from './ClickCounter';
 
 export const App = () => {
-  const nma = 'f';
   return (
     <>
       <h1>
