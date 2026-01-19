@@ -48,3 +48,6 @@ export default [
     },
   },
 ];
+
+// By the way, eslint config can be in ESM format or CJS format. Just make sure to name the file accordingly.
+// Also nowadays the CJS format is less common, getting deprecated in favor of ESM.

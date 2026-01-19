@@ -41,3 +41,5 @@ module.exports = {
     }),
   ],
 }
+// While webpack config is being done here as CJS, it is entirely possible to do this using ESM, just need to set "type": "module" in package.json
+// And update the file sytnax to esmodule config style
