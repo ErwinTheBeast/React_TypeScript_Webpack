@@ -5,6 +5,9 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import importPlugin from "eslint-plugin-import";
+import jestPlugin from "eslint-plugin-jest";
+
+const jestFlatRecommended = jestPlugin.configs["flat/recommended"];
 
 export default [
   js.configs.recommended,
@@ -45,6 +48,19 @@ export default [
       "react/prop-types": "off",
       "react/jsx-uses-react": "off",
       "react/react-in-jsx-scope": "off",
+    },
+  },
+
+  {
+    files: ["**/*.{test,spec}.{js,jsx,ts,tsx}", "tests/**/*.{js,jsx,ts,tsx}"],
+    ...jestFlatRecommended,
+    rules: { // Custom rules for Jest in addition to the recommended ones
+      ...jestFlatRecommended.rules,
+      "jest/no-disabled-tests": "warn",
+      "jest/no-focused-tests": "error",
+      "jest/no-identical-title": "error",
+      "jest/prefer-to-have-length": "warn",
+      "jest/valid-expect": "error",
     },
   },
 ];
