@@ -9,7 +9,7 @@ export const App = () => {
   return (
     <>
       <h1>
-        Yo!! React_TypeScript_Webpack - {process.env.name}{' '}
+        Yo!! React_TypeScript_Webpack! - {process.env.name}{' '}
         {process.env.NODE_ENV}
       </h1>
       <img src={IMAGE} alt="React Logo" width="300" height="200" />
