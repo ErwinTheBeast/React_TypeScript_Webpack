@@ -1,7 +1,8 @@
 name: Node Continuous Integration
 
 on:
-  pull_request: # what event to listen to (trigger the workflow)
+  pull_request:
+  push:
 
 jobs:
   lint:
