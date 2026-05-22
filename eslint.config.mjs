@@ -52,7 +52,7 @@ export default [
   },
 
   {
-    files: ["**/*.{test,spec}.{js,jsx,ts,tsx}", "tests/**/*.{js,jsx,ts,tsx}"],
+    files: ["**/__tests__/**/*.{test,spec}.{js,jsx,ts,tsx}"],
     ...jestFlatRecommended,
     rules: { // Custom rules for Jest in addition to the recommended ones
       ...jestFlatRecommended.rules,
