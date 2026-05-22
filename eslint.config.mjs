@@ -10,8 +10,10 @@ import jestPlugin from "eslint-plugin-jest";
 const jestFlatRecommended = jestPlugin.configs["flat/recommended"];
 
 export default [
+  // eslint config for the project
   js.configs.recommended,
 
+  // eslint config for src files
   {
     files: ["src/**/*.{js,jsx,ts,tsx}"],
 
@@ -50,7 +52,7 @@ export default [
       "react/react-in-jsx-scope": "off",
     },
   },
-
+// eslint config for jest tests
   {
     files: ["**/__tests__/**/*.{test,spec}.{js,jsx,ts,tsx}"],
     ...jestFlatRecommended,
