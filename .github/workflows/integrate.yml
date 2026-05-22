@@ -12,8 +12,8 @@ jobs:
       - uses: actions/setup-node@v3 # setup the node environment
         with:
           node-version: '25' # what node version to use in the VM environment
-      - run: yarn clean
       - run: yarn install
+      - run: yarn clean
       - run: yarn lint
   typecheck:
     runs-on: ubuntu-latest
@@ -22,8 +22,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '25'
-      - run: yarn clean
       - run: yarn install
+      - run: yarn clean
       - run: yarn typecheck
   prettier:
     runs-on: ubuntu-latest
@@ -32,8 +32,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '25'
-      - run: yarn clean
       - run: yarn install
+      - run: yarn clean
       - run: yarn prettier
   test:
     needs: [lint, typecheck, prettier]
@@ -43,8 +43,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '25'
-      - run: yarn clean
       - run: yarn install
+      - run: yarn clean
       - run: yarn test
   build:
     needs: test
@@ -54,6 +54,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '25'
-      - run: yarn clean
       - run: yarn install
+      - run: yarn clean
       - run: yarn build
