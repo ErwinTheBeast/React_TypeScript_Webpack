@@ -10,7 +10,7 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
+# Allow only one concurrent deployment to avoid conflicts
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -33,11 +33,11 @@ jobs:
         yarn build
 
     - name: Upload production artifacts
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v3 # upload the production artifacts to the GitHub Pages
       with:
         # CHANGE THIS to your actual Webpack output folder (e.g., './dist' or './build')
-        path: './build' 
+        path: './build' # the path to the production artifacts
 
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v4
+      uses: actions/deploy-pages@v4 # deploy the production artifacts to the GitHub Pages
