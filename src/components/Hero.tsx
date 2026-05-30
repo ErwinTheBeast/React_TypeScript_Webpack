@@ -21,7 +21,7 @@ export const Hero = ({ content }: HeroProps) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    let fadeTimeout: number | undefined;
+    let fadeTimeout: ReturnType<typeof setTimeout> | undefined;
 
     const interval = setInterval(() => {
       setVisible(false);
