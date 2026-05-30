@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import globals from "globals";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import jsxA11y from "eslint-plugin-jsx-a11y";
@@ -21,6 +22,7 @@ export default [
       parser: tsParser,
       ecmaVersion: 2020,
       sourceType: "module",
+      globals: globals.browser,
     },
 
     plugins: {
