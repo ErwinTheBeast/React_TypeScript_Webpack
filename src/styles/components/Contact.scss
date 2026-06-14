@@ -1,0 +1,51 @@
+.contactCard {
+  display: grid;
+  gap: 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    135deg,
+    rgba(109, 40, 217, 0.06),
+    rgba(8, 145, 178, 0.05)
+  );
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.contactTitle {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.contactNote {
+  margin: 8px 0 0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.contactRight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+
+.contactEmail {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+@media (min-width: 860px) {
+  .contactCard {
+    grid-template-columns: 1.4fr 0.6fr;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .contactRight {
+    align-items: end;
+    text-align: right;
+  }
+}

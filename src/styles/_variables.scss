@@ -1,0 +1,19 @@
+:root {
+  --bg0: #f6f4ef;
+  --bg1: #faf9f6;
+  --surface: rgba(255, 255, 255, 0.85);
+  --surface2: rgba(255, 255, 255, 0.95);
+  --border: rgba(15, 23, 42, 0.1);
+  --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  --text: rgba(15, 23, 42, 0.92);
+  --muted: rgba(15, 23, 42, 0.68);
+  --muted2: rgba(15, 23, 42, 0.52);
+  --accent0: #6d28d9;
+  --accent1: #0891b2;
+  --ring: rgba(8, 145, 178, 0.45);
+  --radius: 16px;
+  --radiusSm: 12px;
+  --container: 1120px;
+  /* Swap to url('../assets/hero.jpg') when you add a real hero image */
+  --hero-bg-image: none;
+}

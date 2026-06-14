@@ -1,0 +1,17 @@
+.socialIconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color 120ms ease;
+
+  &:hover {
+    color: var(--text);
+  }
+}
+
+.socialIconSvg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}

@@ -1,0 +1,26 @@
+.footer {
+  padding: 34px 0 44px;
+  border-top: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 860px) {
+  .footerInner {
+    flex-direction: row;
+    align-items: center;
+  }
+}

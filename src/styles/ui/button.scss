@@ -1,0 +1,44 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition:
+    transform 120ms ease,
+    background-color 120ms ease,
+    border-color 120ms ease;
+  will-change: transform;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.buttonSm {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+}
+
+.buttonPrimary {
+  background: linear-gradient(135deg, var(--accent0), var(--accent1));
+  color: #fff;
+  border-color: transparent;
+
+  &:hover {
+    filter: brightness(1.05);
+  }
+}
+
+.buttonGhost {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--border);
+  color: var(--text);
+
+  &:hover {
+    background: #fff;
+    border-color: rgba(15, 23, 42, 0.18);
+  }
+}

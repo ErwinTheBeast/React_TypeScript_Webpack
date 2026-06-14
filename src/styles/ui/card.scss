@@ -1,0 +1,58 @@
+.card {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 18px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.04);
+}
+
+.cardHover {
+  transition:
+    transform 140ms ease,
+    background-color 140ms ease,
+    border-color 140ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: var(--surface2);
+    border-color: rgba(15, 23, 42, 0.14);
+  }
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.cardDescription {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.cardTop {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cardLinks {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: end;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.bullets {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+
+  li {
+    margin: 8px 0;
+  }
+}
