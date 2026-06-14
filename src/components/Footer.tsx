@@ -14,10 +14,10 @@ export const Footer = () => {
           {langFooter.ALL_RIGHTS_RESERVED}
         </p>
         <div className="footerLinks" aria-label="Footer social links">
-          {langHero.SOCIAL_LINKS.map((s) => (
+          {langHero.SOCIAL_LINKS.map((social) => (
             <SocialLinkAnchor
-              key={s.label}
-              link={s}
+              key={social.label}
+              link={social}
               className="socialIconLink"
             />
           ))}
