@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'ui/anchor';
 
 *,
 *::before,
@@ -34,11 +35,6 @@ main {
 img {
   max-width: 100%;
   display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 :focus-visible {
