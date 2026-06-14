@@ -1,22 +1,13 @@
+import '../styles/components/Hero.scss';
+import '../styles/ui/button.scss';
+import '../styles/ui/social.scss';
 import { useEffect, useState } from 'react';
-import { PortfolioContent } from '../content/portfolio';
-
-const ROTATING_PHRASES = [
-  'design-system quality components',
-  'high-performance UIs',
-  'accessible, responsive web apps',
-];
+import { langHero, langHeroRotatingPhrases } from '../content/lang/langHero';
+import { SocialLinkAnchor } from './SocialLinkAnchor';
 
 const ROTATE_MS = 3000;
 
-type HeroProps = {
-  content: Pick<
-    PortfolioContent,
-    'name' | 'role' | 'location' | 'summary' | 'availableFor' | 'social'
-  >;
-};
-
-export const Hero = ({ content }: HeroProps) => {
+export const Hero = () => {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -26,7 +17,7 @@ export const Hero = ({ content }: HeroProps) => {
     const interval = setInterval(() => {
       setVisible(false);
       fadeTimeout = setTimeout(() => {
-        setPhraseIndex((i) => (i + 1) % ROTATING_PHRASES.length);
+        setPhraseIndex((i) => (i + 1) % langHeroRotatingPhrases.length);
         setVisible(true);
       }, 280);
     }, ROTATE_MS);
@@ -37,7 +28,7 @@ export const Hero = ({ content }: HeroProps) => {
     };
   }, []);
 
-  const currentPhrase = ROTATING_PHRASES[phraseIndex];
+  const currentPhrase = langHeroRotatingPhrases[phraseIndex];
 
   return (
     <section id="top" className="hero">
@@ -46,17 +37,18 @@ export const Hero = ({ content }: HeroProps) => {
         <div className="heroLeft">
           <p className="pill">
             <span className="pillDot" aria-hidden="true" />
-            {content.availableFor}
+            {langHero.OPEN_TO_FULL_TIME_ROLES_AND_FREELANCE_WORK}
           </p>
 
           <h1 className="heroTitle">
-            {content.name}
+            {langHero.SHUBHAM_DESHPANDE}
             <span className="heroTitleAccent">.</span>
           </h1>
 
           <p className="heroIntro">
-            I&apos;m a <span className="heroIntroRole">{content.role}</span>
-            {' who builds '}
+            {langHero.IM_A}{' '}
+            <span className="heroIntroRole">{langHero.FRONTEND_ENGINEER}</span>
+            {langHero.WHO_BUILDS}
             <span
               className={`heroRotating ${visible ? 'heroRotatingVisible' : 'heroRotatingHidden'}`}
               aria-live="polite"
@@ -68,32 +60,30 @@ export const Hero = ({ content }: HeroProps) => {
 
           <p className="heroSubtitle">
             <span className="heroSubtitleSep" aria-hidden="true">
-              {content.location}
+              {langHero.INDIA}
             </span>
           </p>
 
-          <p className="heroSummary">{content.summary}</p>
+          <p className="heroSummary">
+            {langHero.I_BUILD_FAST_ACCESSIBLE_WEB_EXPERIENCES}
+          </p>
 
           <div className="heroCtas">
             <a className="button buttonPrimary" href="#projects">
-              View Projects
+              {langHero.VIEW_PROJECTS}
             </a>
             <a className="button buttonGhost" href="#contact">
-              Get in touch
+              {langHero.GET_IN_TOUCH}
             </a>
           </div>
 
           <div className="heroSocial">
-            {content.social.map((s) => (
-              <a
+            {langHero.SOCIAL_LINKS.map((s) => (
+              <SocialLinkAnchor
                 key={s.label}
-                className="textLink"
-                href={s.href}
-                target={s.href.startsWith('http') ? '_blank' : undefined}
-                rel={s.href.startsWith('http') ? 'noreferrer' : undefined}
-              >
-                {s.label}
-              </a>
+                link={s}
+                className="socialIconLink"
+              />
             ))}
           </div>
         </div>

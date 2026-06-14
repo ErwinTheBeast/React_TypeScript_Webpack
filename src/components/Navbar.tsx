@@ -1,13 +1,16 @@
+import '../styles/components/Navbar.scss';
+import '../styles/ui/button.scss';
+import '../styles/ui/social.scss';
 import { useState } from 'react';
-import { SocialLink } from '../content/portfolio';
+import { langHero } from '../content/lang/langHero';
+import { langNav } from '../content/lang/langNav';
+import { SocialLinkAnchor } from './SocialLinkAnchor';
 
 type NavbarProps = {
-  name: string;
   links: Array<{ label: string; href: string }>;
-  social: SocialLink[];
 };
 
-export const Navbar = ({ name, links, social }: NavbarProps) => {
+export const Navbar = ({ links }: NavbarProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const panelId = 'nav-mobile-panel';
 
@@ -17,11 +20,15 @@ export const Navbar = ({ name, links, social }: NavbarProps) => {
     <header className="nav">
       <div className="container">
         <div className="navInner">
-          <a className="navBrand" href="#top" aria-label={`${name} home`}>
+          <a
+            className="navBrand"
+            href="#top"
+            aria-label={`${langHero.SHUBHAM_DESHPANDE} home`}
+          >
             <span className="navBrandMark" aria-hidden="true">
               ⬢
             </span>
-            <span className="navBrandText">{name}</span>
+            <span className="navBrandText">{langHero.SHUBHAM_DESHPANDE}</span>
           </a>
 
           <nav className="navLinks" aria-label="Primary">
@@ -31,33 +38,29 @@ export const Navbar = ({ name, links, social }: NavbarProps) => {
               </a>
             ))}
             <a className="navLink" href="#contact">
-              Contact
+              {langNav.CONTACT}
             </a>
           </nav>
 
           <div className="navRight">
             <div className="navSocial" aria-label="Social links">
-              {social.map((s) => (
-                <a
+              {langHero.SOCIAL_LINKS.map((s) => (
+                <SocialLinkAnchor
                   key={s.label}
-                  className="navIconLink"
-                  href={s.href}
-                  target={s.href.startsWith('http') ? '_blank' : undefined}
-                  rel={s.href.startsWith('http') ? 'noreferrer' : undefined}
-                >
-                  {s.label}
-                </a>
+                  link={s}
+                  className="socialIconLink"
+                />
               ))}
             </div>
             <a className="button buttonPrimary buttonSm" href="#contact">
-              Contact
+              {langNav.CONTACT}
             </a>
             <button
               type="button"
               className="navMenuBtn"
               aria-expanded={menuOpen}
               aria-controls={panelId}
-              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-label={menuOpen ? langNav.CLOSE_MENU : langNav.OPEN_MENU}
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? '✕' : '☰'}
@@ -82,21 +85,17 @@ export const Navbar = ({ name, links, social }: NavbarProps) => {
               </a>
             ))}
             <a className="navMobileLink" href="#contact" onClick={closeMenu}>
-              Contact
+              {langNav.CONTACT}
             </a>
           </nav>
           <div className="navMobileSocial" aria-label="Mobile social links">
-            {social.map((s) => (
-              <a
+            {langHero.SOCIAL_LINKS.map((s) => (
+              <SocialLinkAnchor
                 key={s.label}
-                className="navIconLink"
-                href={s.href}
-                target={s.href.startsWith('http') ? '_blank' : undefined}
-                rel={s.href.startsWith('http') ? 'noreferrer' : undefined}
+                link={s}
+                className="socialIconLink"
                 onClick={closeMenu}
-              >
-                {s.label}
-              </a>
+              />
             ))}
           </div>
         </div>

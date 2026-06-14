@@ -1,16 +1,12 @@
-type SkillsGroup = {
-  group: string;
-  items: string[];
-};
+import '../styles/ui/card.scss';
+import '../styles/ui/chip.scss';
+import '../styles/ui/grid.scss';
+import { langSkillsGroups } from '../content/lang/langSkills';
 
-type SkillsProps = {
-  skills: SkillsGroup[];
-};
-
-export const Skills = ({ skills }: SkillsProps) => {
+export const Skills = () => {
   return (
     <div className="grid grid2">
-      {skills.map((g) => (
+      {langSkillsGroups.map((g) => (
         <div key={g.group} className="card">
           <h3 className="cardTitle">{g.group}</h3>
           <div className="chipRow" aria-label={`${g.group} skills`}>

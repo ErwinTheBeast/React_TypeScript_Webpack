@@ -1,13 +1,10 @@
-import { ExperienceItem } from '../content/portfolio';
+import '../styles/components/Experience.scss';
+import { langExperienceItems } from '../content/lang/langExperience';
 
-type ExperienceProps = {
-  items: ExperienceItem[];
-};
-
-export const Experience = ({ items }: ExperienceProps) => {
+export const Experience = () => {
   return (
     <ol className="timeline" aria-label="Experience timeline">
-      {items.map((item) => (
+      {langExperienceItems.map((item) => (
         <li
           key={`${item.company}-${item.role}-${item.start}`}
           className="timelineItem"

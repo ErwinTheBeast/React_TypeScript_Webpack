@@ -1,14 +1,11 @@
-import { Project } from '../content/portfolio';
+import '../styles/ui/grid.scss';
+import { langProjectsItems } from '../content/lang/langProjects';
 import { ProjectCard } from './ProjectCard';
 
-type ProjectsProps = {
-  projects: Project[];
-};
-
-export const Projects = ({ projects }: ProjectsProps) => {
+export const Projects = () => {
   return (
     <div className="grid grid3">
-      {projects.map((p) => (
+      {langProjectsItems.map((p) => (
         <ProjectCard key={p.title} project={p} />
       ))}
     </div>

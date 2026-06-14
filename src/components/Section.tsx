@@ -1,3 +1,4 @@
+import '../styles/components/Section.scss';
 import { ReactNode } from 'react';
 
 type SectionProps = {

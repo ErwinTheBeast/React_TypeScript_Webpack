@@ -1,29 +1,25 @@
-import { SocialLink } from '../content/portfolio';
+import '../styles/components/Footer.scss';
+import '../styles/ui/social.scss';
+import { langFooter } from '../content/lang/langFooter';
+import { langHero } from '../content/lang/langHero';
+import { SocialLinkAnchor } from './SocialLinkAnchor';
 
-type FooterProps = {
-  name: string;
-  social: SocialLink[];
-};
-
-export const Footer = ({ name, social }: FooterProps) => {
+export const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="container footerInner">
         <p className="muted">
-          © {year} {name}. All rights reserved.
+          © {year} {langHero['SHUBHAM_DESHPANDE']}.{' '}
+          {langFooter.ALL_RIGHTS_RESERVED}
         </p>
         <div className="footerLinks" aria-label="Footer social links">
-          {social.map((s) => (
-            <a
+          {langHero.SOCIAL_LINKS.map((s) => (
+            <SocialLinkAnchor
               key={s.label}
-              className="textLink"
-              href={s.href}
-              target={s.href.startsWith('http') ? '_blank' : undefined}
-              rel={s.href.startsWith('http') ? 'noreferrer' : undefined}
-            >
-              {s.label}
-            </a>
+              link={s}
+              className="socialIconLink"
+            />
           ))}
         </div>
       </div>

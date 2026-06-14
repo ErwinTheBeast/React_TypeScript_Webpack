@@ -1,5 +1,12 @@
-import './styles.scss';
-import { portfolio } from './content/portfolio';
+import './styles/global.scss';
+import './styles/ui/card.scss';
+import './styles/ui/grid.scss';
+import { langAbout, langAboutHighlightItems } from './content/lang/langAbout';
+import { langContact } from './content/lang/langContact';
+import { langExperience } from './content/lang/langExperience';
+import { langProjects } from './content/lang/langProjects';
+import { langSkills } from './content/lang/langSkills';
+import { navLinks } from './helpers/navLinks';
 import { Contact } from './components/Contact';
 import { Experience } from './components/Experience';
 import { Footer } from './components/Footer';
@@ -12,28 +19,23 @@ import { Skills } from './components/Skills';
 export const App = () => {
   return (
     <>
-      <Navbar
-        name={portfolio.name}
-        social={portfolio.social}
-        links={[
-          { label: 'About', href: '#about' },
-          { label: 'Skills', href: '#skills' },
-          { label: 'Projects', href: '#projects' },
-          { label: 'Experience', href: '#experience' },
-        ]}
-      />
+      <Navbar links={navLinks} />
       <main>
-        <Hero content={portfolio} />
+        <Hero />
 
-        <Section id="about" eyebrow="Intro" title={portfolio.about.heading}>
+        <Section id="about" eyebrow={langAbout.INTRO} title={langAbout.ABOUT}>
           <div className="grid grid2">
             <div className="card">
-              <p className="lead">{portfolio.about.body}</p>
+              <p className="lead">
+                {
+                  langAbout.IM_A_SOFTWARE_ENGINEER_FOCUSED_ON_PRODUCT_UI_AND_PERFORMANCE
+                }
+              </p>
             </div>
             <div className="card">
-              <h3 className="cardTitle">Highlights</h3>
+              <h3 className="cardTitle">{langAbout.HIGHLIGHTS}</h3>
               <ul className="bullets">
-                {portfolio.about.highlights.map((h) => (
+                {langAboutHighlightItems.map((h) => (
                   <li key={h}>{h}</li>
                 ))}
               </ul>
@@ -43,40 +45,40 @@ export const App = () => {
 
         <Section
           id="skills"
-          eyebrow="Toolkit"
-          title="Skills"
-          description="A snapshot of what I use most often."
+          eyebrow={langSkills.TOOLKIT}
+          title={langSkills.SKILLS}
+          description={langSkills.A_SNAPSHOT_OF_WHAT_I_USE_MOST_OFTEN}
         >
-          <Skills skills={portfolio.skills} />
+          <Skills />
         </Section>
 
         <Section
           id="projects"
-          eyebrow="Work"
-          title="Featured Projects"
-          description="A few projects I’ve enjoyed building."
+          eyebrow={langProjects.WORK}
+          title={langProjects.FEATURED_PROJECTS}
+          description={langProjects.A_FEW_PROJECTS_IVE_ENJOYED_BUILDING}
         >
-          <Projects projects={portfolio.projects} />
+          <Projects />
         </Section>
 
         <Section
           id="experience"
-          eyebrow="Background"
-          title="Experience"
-          description="Roles and impact over time."
+          eyebrow={langExperience.BACKGROUND}
+          title={langExperience.EXPERIENCE}
+          description={langExperience.ROLES_AND_IMPACT_OVER_TIME}
         >
-          <Experience items={portfolio.experience} />
+          <Experience />
         </Section>
 
-        <Section id="contact" eyebrow="Next" title={portfolio.contact.heading}>
-          <Contact
-            heading="Let’s build something great"
-            email={portfolio.contact.email}
-            note={portfolio.contact.note}
-          />
+        <Section
+          id="contact"
+          eyebrow={langContact.NEXT}
+          title={langContact.CONTACT}
+        >
+          <Contact />
         </Section>
       </main>
-      <Footer name={portfolio.name} social={portfolio.social} />
+      <Footer />
     </>
   );
 };
