@@ -6,11 +6,11 @@ import { langSkillsGroups } from '../lang/langSkills';
 export const Skills = () => {
   return (
     <div className="grid grid2">
-      {langSkillsGroups.map((g) => (
-        <div key={g.group} className="card">
-          <h3 className="cardTitle">{g.group}</h3>
-          <div className="chipRow" aria-label={`${g.group} skills`}>
-            {g.items.map((item) => (
+      {langSkillsGroups.map((skillGroup) => (
+        <div key={skillGroup.group} className="card">
+          <h3 className="cardTitle">{skillGroup.group}</h3>
+          <div className="chipRow" aria-label={`${skillGroup.group} skills`}>
+            {skillGroup.items.map((item) => (
               <span key={item} className="chip">
                 {item}
               </span>

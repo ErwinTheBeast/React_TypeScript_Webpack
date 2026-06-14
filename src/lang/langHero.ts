@@ -1,5 +1,3 @@
-import type { SocialLink } from '../types';
-
 export const langHero = {
   SHUBHAM_DESHPANDE: 'Shubham Deshpande',
   FRONTEND_ENGINEER: 'Frontend Engineer',
@@ -12,7 +10,7 @@ export const langHero = {
     { label: 'GitHub', href: 'https://github.com/', icon: 'github' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/', icon: 'linkedin' },
     { label: 'Email', href: 'mailto:you@example.com', icon: 'email' },
-  ] satisfies SocialLink[],
+  ],
   IM_A: "I'm a",
   WHO_BUILDS: ' who builds ',
   VIEW_PROJECTS: 'View Projects',

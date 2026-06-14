@@ -10,4 +10,5 @@ export const navLinks: NavLink[] = [
   { label: langNav.SKILLS, href: '#skills' },
   { label: langNav.PROJECTS, href: '#projects' },
   { label: langNav.EXPERIENCE, href: '#experience' },
+  { label: langNav.CONTACT, href: '#contact' },
 ];

@@ -37,9 +37,6 @@ export const Navbar = ({ links }: NavbarProps) => {
                 {link.label}
               </a>
             ))}
-            <a className="navLink" href="#contact">
-              {langNav.CONTACT}
-            </a>
           </nav>
 
           <div className="navRight">

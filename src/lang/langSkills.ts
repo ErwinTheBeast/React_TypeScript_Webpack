@@ -1,5 +1,3 @@
-import type { SkillGroup } from '../types';
-
 export const langSkills = {
   TOOLKIT: 'Toolkit',
   SKILLS: 'Skills',
@@ -16,10 +14,10 @@ export const langSkills = {
     group: 'Tools',
     items: ['Webpack', 'Jest', 'ESLint', 'Prettier'],
   },
-} satisfies Record<string, string | SkillGroup>;
+};
 
 export const langSkillsGroups = [
   langSkills.FRONTEND,
   langSkills.BACKEND,
   langSkills.TOOLS,
-] satisfies SkillGroup[];
+];
