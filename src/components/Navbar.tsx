@@ -10,6 +10,13 @@ type NavbarProps = {
   links: Array<{ label: string; href: string }>;
 };
 
+const renderNavLinks = (links: NavbarProps['links']) =>
+  links.map((link) => (
+    <a key={link.href} className="navLink" href={link.href}>
+      {link.label}
+    </a>
+  ));
+
 export const Navbar = ({ links }: NavbarProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const panelId = 'nav-mobile-panel';
@@ -32,11 +39,7 @@ export const Navbar = ({ links }: NavbarProps) => {
           </a>
 
           <nav className="navLinks" aria-label="Primary">
-            {links.map((link) => (
-              <a key={link.href} className="navLink" href={link.href}>
-                {link.label}
-              </a>
-            ))}
+            {renderNavLinks(links)}
           </nav>
 
           <div className="navRight">

@@ -7,6 +7,11 @@ import { SocialLinkAnchor } from './SocialLinkAnchor';
 
 const ROTATE_MS = 3000;
 
+const getSocialLinks = () =>
+  langHero.SOCIAL_LINKS.map((s) => (
+    <SocialLinkAnchor key={s.label} link={s} className="socialIconLink" />
+  ));
+
 export const Hero = () => {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -77,15 +82,7 @@ export const Hero = () => {
             </a>
           </div>
 
-          <div className="heroSocial">
-            {langHero.SOCIAL_LINKS.map((s) => (
-              <SocialLinkAnchor
-                key={s.label}
-                link={s}
-                className="socialIconLink"
-              />
-            ))}
-          </div>
+          <div className="heroSocial">{getSocialLinks()}</div>
         </div>
       </div>
     </section>
