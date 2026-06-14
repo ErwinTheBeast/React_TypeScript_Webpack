@@ -1,5 +1,5 @@
 import '../styles/components/Experience.scss';
-import { langExperienceItems } from '../content/lang/langExperience';
+import { langExperienceItems } from '../lang/langExperience';
 
 export const Experience = () => {
   return (

@@ -2,7 +2,7 @@ import '../styles/components/Hero.scss';
 import '../styles/ui/button.scss';
 import '../styles/ui/social.scss';
 import { useEffect, useState } from 'react';
-import { langHero, langHeroRotatingPhrases } from '../content/lang/langHero';
+import { langHero, langHeroRotatingPhrases } from '../lang/langHero';
 import { SocialLinkAnchor } from './SocialLinkAnchor';
 
 const ROTATE_MS = 3000;

@@ -1,5 +1,5 @@
 import '../styles/ui/grid.scss';
-import { langProjectsItems } from '../content/lang/langProjects';
+import { langProjectsItems } from '../lang/langProjects';
 import { ProjectCard } from './ProjectCard';
 
 export const Projects = () => {

@@ -1,11 +1,11 @@
 import './styles/global.scss';
 import './styles/ui/card.scss';
 import './styles/ui/grid.scss';
-import { langAbout, langAboutHighlightItems } from './content/lang/langAbout';
-import { langContact } from './content/lang/langContact';
-import { langExperience } from './content/lang/langExperience';
-import { langProjects } from './content/lang/langProjects';
-import { langSkills } from './content/lang/langSkills';
+import { langAbout, langAboutHighlightItems } from './lang/langAbout';
+import { langContact } from './lang/langContact';
+import { langExperience } from './lang/langExperience';
+import { langProjects } from './lang/langProjects';
+import { langSkills } from './lang/langSkills';
 import { navLinks } from './helpers/navLinks';
 import { Contact } from './components/Contact';
 import { Experience } from './components/Experience';

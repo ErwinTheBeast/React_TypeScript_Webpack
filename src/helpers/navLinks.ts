@@ -1,4 +1,4 @@
-import { langNav } from '../content/lang/langNav';
+import { langNav } from '../lang/langNav';
 
 export type NavLink = {
   label: string;

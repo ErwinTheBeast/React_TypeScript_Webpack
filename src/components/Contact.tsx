@@ -1,6 +1,6 @@
 import '../styles/components/Contact.scss';
 import '../styles/ui/button.scss';
-import { langContact } from '../content/lang/langContact';
+import { langContact } from '../lang/langContact';
 
 export const Contact = () => {
   return (

@@ -2,8 +2,8 @@ import '../styles/components/Navbar.scss';
 import '../styles/ui/button.scss';
 import '../styles/ui/social.scss';
 import { useState } from 'react';
-import { langHero } from '../content/lang/langHero';
-import { langNav } from '../content/lang/langNav';
+import { langHero } from '../lang/langHero';
+import { langNav } from '../lang/langNav';
 import { SocialLinkAnchor } from './SocialLinkAnchor';
 
 type NavbarProps = {

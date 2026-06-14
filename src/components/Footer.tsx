@@ -1,7 +1,7 @@
 import '../styles/components/Footer.scss';
 import '../styles/ui/social.scss';
-import { langFooter } from '../content/lang/langFooter';
-import { langHero } from '../content/lang/langHero';
+import { langFooter } from '../lang/langFooter';
+import { langHero } from '../lang/langHero';
 import { SocialLinkAnchor } from './SocialLinkAnchor';
 
 export const Footer = () => {

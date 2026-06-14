@@ -1,7 +1,7 @@
 import '../styles/ui/card.scss';
 import '../styles/ui/chip.scss';
 import '../styles/ui/grid.scss';
-import { langSkillsGroups } from '../content/lang/langSkills';
+import { langSkillsGroups } from '../lang/langSkills';
 
 export const Skills = () => {
   return (

@@ -1,6 +1,6 @@
 import '../styles/ui/card.scss';
 import '../styles/ui/chip.scss';
-import { Project } from '../content/types';
+import { Project } from '../types';
 
 type ProjectCardProps = {
   project: Project;

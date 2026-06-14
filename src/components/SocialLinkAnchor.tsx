@@ -1,4 +1,4 @@
-import { SocialLink } from '../content/types';
+import { SocialLink } from '../types';
 import { SocialIcon } from './SocialIcon';
 
 type SocialLinkAnchorProps = {

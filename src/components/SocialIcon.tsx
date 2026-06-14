@@ -1,6 +1,6 @@
 import '../styles/ui/social.scss';
 import { ReactElement } from 'react';
-import { SocialIconKind } from '../content/types';
+import { SocialIconKind } from '../types';
 
 type SocialIconProps = {
   kind: SocialIconKind;
