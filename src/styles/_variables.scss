@@ -1,16 +1,32 @@
+$bg-primary-white: #f6f4ef;
+$bg-secondary-white: #faf9f6;
+$black: #0f172a;
+$white: #ffffff;
+$violet: #6d28d9;
+$teal: #0891b2;
+
+$color-surface: rgba($white, 0.85);
+$color-surface-elevated: rgba($white, 0.95);
+$color-border: rgba($black, 0.1);
+$color-shadow: rgba($black, 0.08);
+$color-text: rgba($black, 0.92);
+$color-text-muted: rgba($black, 0.68);
+$color-text-muted-subtle: rgba($black, 0.52);
+$color-focus-ring: rgba($teal, 0.45);
+
 :root {
-  --bg0: #f6f4ef;
-  --bg1: #faf9f6;
-  --surface: rgba(255, 255, 255, 0.85);
-  --surface2: rgba(255, 255, 255, 0.95);
-  --border: rgba(15, 23, 42, 0.1);
-  --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
-  --text: rgba(15, 23, 42, 0.92);
-  --muted: rgba(15, 23, 42, 0.68);
-  --muted2: rgba(15, 23, 42, 0.52);
-  --accent0: #6d28d9;
-  --accent1: #0891b2;
-  --ring: rgba(8, 145, 178, 0.45);
+  --bg0: #{$bg-primary-white};
+  --bg1: #{$bg-secondary-white};
+  --surface: #{$color-surface};
+  --surface2: #{$color-surface-elevated};
+  --border: #{$color-border};
+  --shadow: 0 20px 60px #{$color-shadow};
+  --text: #{$color-text};
+  --muted: #{$color-text-muted};
+  --muted2: #{$color-text-muted-subtle};
+  --accent0: #{$violet};
+  --accent1: #{$teal};
+  --ring: #{$color-focus-ring};
   --radius: 16px;
   --radiusSm: 12px;
   --container: 1120px;
